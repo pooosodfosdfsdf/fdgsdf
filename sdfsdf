@@ -42,7 +42,7 @@ for i, v in pairs(workspace:GetDescendants()) do
     end
 end
 
-shared.MoneyFarm = bool
+shared.MoneyFarm == bool
 
 while shared.MoneyFarm do
     wait()
