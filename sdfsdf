@@ -27,7 +27,7 @@ function gettarget()
     for i, v in pairs(game:GetService("Workspace").Cashiers:GetChildren()) do
         if v:FindFirstChild("Head") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
             local distance = (HumanoidRootPart.Position - v.Head.Position).magnitude
-            if distance < maxdistance then
+    if distance < maxdistance thenaq%hy
                 target = v
                 maxdistance = distance
             end
@@ -42,7 +42,7 @@ for i, v in pairs(workspace:GetDescendants()) do
     end
 end
 
-shared.MoneyFarm == bool
+shared.MoneyFarm = true
 
 while shared.MoneyFarm do
     wait()
