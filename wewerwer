@@ -214,7 +214,7 @@ do
 	
 	function library.new(title)
 		local container = utility:Create("ScreenGui", {
-			Name = 'ISIDO123123123'.. getService('HttpService'):GenerateGUID(),
+			Name = getService('HttpService'):GenerateGUID(),
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
