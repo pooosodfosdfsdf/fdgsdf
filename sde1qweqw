@@ -9,9 +9,11 @@ local MHTARGET = Instance.new("ScreenGui")
 MHTARGET.Name = "MHTARGET"
 MHTARGET.Parent = game:GetService("CoreGui")
 
-game:GetService("UserInputService").InputBegan:Connect(function(Input)
-	if Input.KeyCode == Enum.KeyCode.N then
-		MHTARGET.Enabled= not MHTARGET.Enabled
+playa = game.Players.LocalPlayer
+mse = playa:GetMouse()
+mse.KeyDown:connect(function(kkey)
+	if kkey == "n" then
+		MHTARGET.Enabled = not MHTARGET.Enabled
 	end
 end)
 
@@ -580,8 +582,8 @@ function library:CreateWindow(WName)
 	end
 	pcall(function()
 		game:GetService("StarterGui"):SetCore("SendNotification", {
-        	Title = "Venus : Target DH",
-        	Text = "N To Open And Close.",
+        	Title = "Venus",
+        	Text = "Made by gunna#5015",
         	Duration = 5
    	 	})
 	end)
