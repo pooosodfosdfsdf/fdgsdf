@@ -1,17 +1,17 @@
 local library = {count = 0};
 
-local FindLibrary = game:GetService("CoreGui"):FindFirstChild("UI Library")
-if game:GetService("CoreGui"):FindFirstChild("UI Library") then
-	game:GetService("CoreGui"):FindFirstChild("UI Library"):Destroy()
+local FindLibrary = game:GetService("CoreGui"):FindFirstChild("MHTARGET")
+if game:GetService("CoreGui"):FindFirstChild("MHTARGET") then
+	game:GetService("CoreGui"):FindFirstChild("MHTARGET"):Destroy()
 end
 
-local UILibrary = Instance.new("ScreenGui")
-UILibrary.Name = "UI Library"
-UILibrary.Parent = game:GetService("CoreGui")
+local MHTARGET = Instance.new("ScreenGui")
+MHTARGET.Name = "MHTARGET"
+MHTARGET.Parent = game:GetService("CoreGui")
 
 game:GetService("UserInputService").InputBegan:Connect(function(Input)
-	if Input.KeyCode == Enum.KeyCode.RightShift then
-		UILibrary.Enabled= not UILibrary.Enabled
+	if Input.KeyCode == Enum.KeyCode.N then
+		MHTARGET.Enabled= not MHTARGET.Enabled
 	end
 end)
 
@@ -27,7 +27,7 @@ function library:CreateWindow(WName)
 	local UIPadding = Instance.new("UIPadding")
 
 	Holder.Name = WName
-	Holder.Parent = UILibrary
+	Holder.Parent = MHTARGET
 	Holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Holder.BackgroundTransparency = 1.000
 	Holder.BorderSizePixel = 0
@@ -88,7 +88,6 @@ function library:CreateWindow(WName)
 	UIPadding.PaddingTop = UDim.new(0, 40)
 
 	local NewWindow = Holder;
-	--//ALL CREDITS GO TO Google Chrome\\--
 
 	local players = game:service('Players');
     local player = players.LocalPlayer;
@@ -581,8 +580,8 @@ function library:CreateWindow(WName)
 	end
 	pcall(function()
 		game:GetService("StarterGui"):SetCore("SendNotification", {
-        	Title = "Venus",
-        	Text = "Made by gunna#5015",
+        	Title = "Venus : Target DH",
+        	Text = "N To Open And Close.",
         	Duration = 5
    	 	})
 	end)
