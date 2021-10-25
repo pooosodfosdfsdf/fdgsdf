@@ -19,7 +19,7 @@ local DropShadowTransparency = 0.4
 local IconLibraryID = "rbxassetid://3926305904"
 local IconLibraryID2 = "rbxassetid://3926307971"
 
-local MainFont = Enum.Font.GothamSemiBold
+local MainFont = Enum.Font.Gotham-SemiBold
 
 local function GetXY(GuiObject)
 	local X, Y = Mouse.X - GuiObject.AbsolutePosition.X, Mouse.Y - GuiObject.AbsolutePosition.Y
