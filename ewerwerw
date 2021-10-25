@@ -7,19 +7,19 @@ local CoreGuiService = game:GetService("CoreGui")
 local RunService = game:GetService("RunService")
 local TextService = game:GetService("TextService")
 
-local TweenTime = 0.1
+local TweenTime = 0.2
 local Level = 1
 
 local GlobalTweenInfo = TweenInfo.new(TweenTime)
 local AlteredTweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
 
 local DropShadowID = "rbxassetid://297774371"
-local DropShadowTransparency = 0.3
+local DropShadowTransparency = 0.4
 
 local IconLibraryID = "rbxassetid://3926305904"
 local IconLibraryID2 = "rbxassetid://3926307971"
 
-local MainFont = Enum.Font.SourceSans
+local MainFont = Enum.Font.GothamSemiBold
 
 local function GetXY(GuiObject)
 	local X, Y = Mouse.X - GuiObject.AbsolutePosition.X, Mouse.Y - GuiObject.AbsolutePosition.Y
@@ -234,7 +234,7 @@ function UILibrary.Load(GUITitle)
 
 	TitleBar = RoundBox(5)
 	TitleBar.Name = "TitleBar"
-	TitleBar.ImageColor3 = Color3.fromRGB(20,20,20)
+	TitleBar.ImageColor3 = Color3.fromRGB(50,50,50)
 	TitleBar.Size = UDim2.new(1,-10,0,20)
 	TitleBar.Position = UDim2.new(0,5,0,5)
 	TitleBar.Parent = MainFrame
